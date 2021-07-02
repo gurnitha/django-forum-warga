@@ -132,9 +132,14 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
 
         modified:   README.md
 
+#### 2.5.12 Use environ in settings
 
+        E:\workspace\django\ForumWarga\django-forum-warga (main)
+        (venv3932) λ python manage.py check
+        System check identified no issues (0 silenced).
 
-
+        modified:   README.md
+        modified:   config/settings.py
 
 
 
