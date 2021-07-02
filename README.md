@@ -49,13 +49,35 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
             ├── Scripts
             └── pyvenv.cfg
 
+#### 1.5.5 Django Apps
 
+		.
+		├── README.md
+		├── apps
+		│   └── boards
+		│       ├── __init__.py
+		│       ├── admin.py
+		│       ├── apps.py
+		│       ├── migrations
+		│       ├── models.py
+		│       ├── tests.py
+		│       └── views.py
+		├── config
+		│   ├── __init__.py
+		│   ├── asgi.py
+		│   ├── settings.py
+		│   ├── urls.py
+		│   └── wsgi.py
+		├── manage.py
+        └── venv3932
+            ├── Include
+            ├── Lib
+            ├── Scripts
+            └── pyvenv.cfg
 
-
-
-
-
-
+        E:\workspace\django\ForumWarga\django-forum-warga (main)
+        (venv3932) λ python manage.py check
+        System check identified no issues (0 silenced).
 
 
 
