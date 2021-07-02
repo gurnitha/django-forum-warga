@@ -16,12 +16,18 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
 
         modified:   README.md
 
+#### 1.3.3 Installing Django 3.2
 
+        E:\workspace\django\ForumWarga\django-forum-warga (main)
+        λ venv3932\scripts\activate
 
+        E:\workspace\django\ForumWarga\django-forum-warga (main)
+        (venv3932) λ python -m pip install django==3.2
 
+        E:\workspace\django\ForumWarga\django-forum-warga (main)
+        (venv3932) λ python -m pip install --upgrade pip
 
-
-
+        modified:   README.md
 
 
 
