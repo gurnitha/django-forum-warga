@@ -118,10 +118,12 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
 
        modified:   README.md
 
+#### 2.3.10 Install django environ
 
+       E:\workspace\django\ForumWarga\django-forum-warga (main)
+       (venv3932) λ pip install django-environ
 
-
-
+        modified:   README.md
 
 
 
