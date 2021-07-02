@@ -87,11 +87,13 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/views.py
         modified:   config/urls.py
 
+#### 1.1.1 Conclusions
 
+        Conclusions
+        
+		That was the first part of this tutorial series. In this tutorial, we learned how to install the latest Python version and how to setup the development environment. We also had an introduction to virtual environments and started our very first Django project and already created our initial app.
 
-
-
-
+        modified:   README.md
 
 
 
