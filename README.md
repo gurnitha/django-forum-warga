@@ -150,9 +150,21 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         modified:   apps/boards/models.py
 
+#### 2.6.14 Migrating the Models
 
+        E:\workspace\django\ForumWarga\django-forum-warga (main)
+        (venv3932) λ python manage.py makemigrations
+        Migrations for 'boards':
+          apps\boards\migrations\0001_initial.py
+            - Create model Board
+            - Create model Topic
+            - Create model Post
+        
+        E:\workspace\django\ForumWarga\django-forum-warga (main)
+        (venv3932) λ python manage.py migrate
 
-
+        modified:   README.md
+        new file:   apps/boards/migrations/0001_initial.py
 
 
 
