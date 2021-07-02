@@ -166,10 +166,12 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         new file:   apps/boards/migrations/0001_initial.py
 
+#### 2.6.15 Superuser: Create superuser
 
+        E:\workspace\django\ForumWarga\django-forum-warga (main)
+        (venv3932) λ python manage.py createsuperuser
 
-
-
+        modified:   README.md
 
 
 
