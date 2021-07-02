@@ -29,10 +29,25 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
 
         modified:   README.md
 
+#### 1.4.4 Starting a New Project 'config'
 
+        E:\workspace\django\ForumWarga\django-forum-warga (main)
+        (venv3932) λ django-admin startproject config .
 
-
-
+        .
+        ├── README.md
+        ├── config
+        │   ├── __init__.py
+        │   ├── asgi.py
+        │   ├── settings.py
+        │   ├── urls.py
+        │   └── wsgi.py
+        ├── manage.py
+        └── venv3932
+            ├── Include
+            ├── Lib
+            ├── Scripts
+            └── pyvenv.cfg
 
 
 
