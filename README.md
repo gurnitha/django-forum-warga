@@ -206,7 +206,14 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         new file:   static/js/simplemde.min.js
 
 
+### -----------------
+### 3. URLS AND FORMS
+### -----------------
 
+
+#### 3.1.22 Adding root URLconf to settings file
+
+        modified:   config/settings.py
 
 
 
