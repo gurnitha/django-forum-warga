@@ -125,10 +125,12 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
 
         modified:   README.md
 
+#### 2.4.11 Create .env file and setup environ
 
+       E:\workspace\django\ForumWarga\django-forum-warga (main)
+       (venv3932) λ touch config\.env
 
-
-
+        modified:   README.md
 
 
 
