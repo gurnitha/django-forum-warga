@@ -111,10 +111,12 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   .gitignore
         modified:   README.md
 
+#### 2.2.9 Install PostgreSQL driver
 
+       E:\workspace\django\ForumWarga\django-forum-warga (main)
+       (venv3932) λ python -m pip install psycopg2-binary==2.8.6
 
-
-
+       modified:   README.md
 
 
 
