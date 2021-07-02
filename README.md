@@ -182,6 +182,13 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
 
         modified:   README.md  
 
+#### 2.11.18 Use Home Views function to render boards data
+
+        modified:   README.md
+        modified:   apps/boards/views.py
+
+
+
 
 
 
