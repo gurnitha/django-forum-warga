@@ -145,6 +145,5 @@ STATICFILES_DIRS = [
 ]
 
 # Root URLconf
-ROOT_URLCONF = config.urls
-
+ROOT_URLCONF = 'config.urls'
 # -------- NEW END --------

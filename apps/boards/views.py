@@ -14,3 +14,29 @@ def home(request):
     boards = Board.objects.all()
     context = {'boards': boards}
     return render(request, 'home.html', context )
+
+
+# BoardTopic view
+def board_topics(request, pk):
+    board = Board.objects.get(pk=pk)
+    context = {'board': board}
+    return render(request, 'boards/topics.html', context)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

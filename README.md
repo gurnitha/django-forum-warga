@@ -215,6 +215,16 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
 
         modified:   config/settings.py
 
+#### 3.2.23 Create view function, urls and template for board_topics
+
+        modified:   README.md
+        new file:   apps/boards/templates/boards/topics.html
+        modified:   apps/boards/views.py
+        modified:   config/settings.py
+        modified:   config/urls.py
+
+
+
 
 
 

@@ -10,9 +10,10 @@ from apps.boards import views
 
 urlpatterns = [
 
-    # Home page
+    # Boards
     url(r'^$', views.home, name='home'),
-    
+    url(r'^boards/(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
+
     # Admin dashboard
     path('admin/', admin.site.urls),
 ]
