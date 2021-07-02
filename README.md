@@ -150,7 +150,7 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         modified:   apps/boards/models.py
 
-#### 2.6.14 Migrating the Models
+#### 2.7.14 Migrating the Models
 
         E:\workspace\django\ForumWarga\django-forum-warga (main)
         (venv3932) λ python manage.py makemigrations
@@ -166,16 +166,17 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         new file:   apps/boards/migrations/0001_initial.py
 
-#### 2.6.15 Superuser: Create superuser
+#### 2.8.15 Superuser: Create superuser
 
         E:\workspace\django\ForumWarga\django-forum-warga (main)
         (venv3932) λ python manage.py createsuperuser
 
         modified:   README.md
 
+#### 2.9.16 Registering models to admin
 
-
-
+        modified:   README.md
+        modified:   apps/boards/admin.py
 
 
 
