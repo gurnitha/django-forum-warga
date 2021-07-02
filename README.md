@@ -1,8 +1,10 @@
 # DJANO FORUM WARGA
 Membuat Aplikasi Forum Warga menggunakan Django v3.2
 
-
+### -------------------------
 ### Part 1 - Getting Started
+### -------------------------
+
 
 #### 1.1.1 Creating Remote Repository
 
@@ -87,16 +89,27 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/views.py
         modified:   config/urls.py
 
-#### 1.1.1 Conclusions
+#### 1.1.7 Conclusions
 
         Conclusions
         
-		That was the first part of this tutorial series. In this tutorial, we learned how to install the latest Python version and how to setup the development environment. We also had an introduction to virtual environments and started our very first Django project and already created our initial app.
+        That was the first part of this tutorial series. In this tutorial, we learned how to install the latest Python version and how to setup the development environment. We also had an introduction to virtual environments and started our very first Django project and already created our initial app.
 
         modified:   README.md
 
 
+### ------------------------------------------------------
+### Part 2 - Fundamentals: Database, Model, View, Template
+### ------------------------------------------------------
 
+
+#### 2.1.8 Create postgres database
+
+        hp=# CREATE DATABASE django_forum_warga;
+        CREATE DATABASE
+
+        modified:   .gitignore
+        modified:   README.md
 
 
 
