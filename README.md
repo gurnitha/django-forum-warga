@@ -193,7 +193,17 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         new file:   apps/boards/templates/home.html
         modified:   apps/boards/views.py
 
+#### 2.13.20 Modified home page by adding table
 
+        modified:   README.md
+        modified:   apps/boards/templates/home.html 
+
+#### 2.14.21 Static Files and Bootstrap Setup: modified home page
+
+        modified:   README.md
+        modified:   apps/boards/templates/home.html
+        ...
+        new file:   static/js/simplemde.min.js
 
 
 
