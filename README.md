@@ -440,7 +440,11 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/accounts/views.py
         modified:   config/urls.py 
 
+#### 4.4.61 Hidding (Blocking) navar and breadcrumb for signup, login or user authenticaton pages
 
+        modified:   README.md
+        modified:   apps/accounts/templates/accounts/signup.html
+        modified:   templates/base.html
 
 
 
