@@ -713,6 +713,12 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         modified:   apps/boards/models.py
 
+#### 5.10.81 Improving the home page template to show counts of posts, topics and link to show detail post
+
+        modified:   README.md
+        modified:   apps/boards/models.py
+        modified:   apps/boards/templates/boards/home.html
+
 
 
 
