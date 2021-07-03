@@ -227,14 +227,22 @@ Victor on Django        Victor      0           0       July 3, 2021, 9:36 a.m.
 """
 
 
-# TopicPosts view
+# # TopicPosts view 1
+# def topic_posts(request, pk, topic_pk):
+#     topic = get_object_or_404(Topic, board__pk=pk, pk=topic_pk)
+#     return render(request, 'boards/topic_posts.html', {'topic': topic})
+
+# # http://127.0.0.1:8000/boards/1/topics/1/
+
+# # Boards /Django / Hallo every one
+
+
+# TopicPosts view 2
 def topic_posts(request, pk, topic_pk):
     topic = get_object_or_404(Topic, board__pk=pk, pk=topic_pk)
+    topic.views += 1
+    topic.save()
     return render(request, 'boards/topic_posts.html', {'topic': topic})
-
-# http://127.0.0.1:8000/boards/1/topics/1/
-
-# Boards /Django / Hallo every one
 
 
 @login_required
