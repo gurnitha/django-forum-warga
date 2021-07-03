@@ -598,6 +598,15 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         new file:   templates/registration/password_reset_subject.txt
 
 
+### --------------------
+### 5. PROTECTING VIEWS
+### --------------------
+
+
+#### 5.1.73 Protecting create topic from un-authenticated user
+
+        modified:   README.md
+        modified:   apps/boards/views.py
 
 
 
