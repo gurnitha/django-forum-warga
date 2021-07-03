@@ -150,4 +150,6 @@ STATICFILES_DIRS = [
 
 # Root URLconf
 ROOT_URLCONF = 'config.urls'
+LOGOUT_REDIRECT_URL = 'home'
+
 # -------- NEW END --------
