@@ -376,6 +376,62 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         (venv3932) λ python manage.py check
         System check identified no issues (0 silenced).
 
+#### 4.2.59 Current project structures
+
+        .
+        ├── README.md
+        ├── apps
+        │   ├── accounts
+        │   │   ├── __init__.py
+        │   │   ├── __pycache__
+        │   │   ├── admin.py
+        │   │   ├── apps.py
+        │   │   ├── migrations
+        │   │   ├── models.py
+        │   │   ├── tests.py
+        │   │   └── views.py
+        │   └── boards
+        │       ├── __init__.py
+        │       ├── __pycache__
+        │       ├── admin.py
+        │       ├── apps.py
+        │       ├── forms.py
+        │       ├── migrations
+        │       ├── models.py
+        │       ├── templates
+        │       ├── tests.py
+        │       └── views.py
+        ├── config
+        │   ├── __init__.py
+        │   ├── __pycache__
+        │   │   ├── __init__.cpython-39.pyc
+        │   │   ├── settings.cpython-39.pyc
+        │   │   ├── urls.cpython-39.pyc
+        │   │   └── wsgi.cpython-39.pyc
+        │   ├── asgi.py
+        │   ├── settings.py
+        │   ├── urls.py
+        │   └── wsgi.py
+        ├── db.sqlite3
+        ├── manage.py
+        ├── static
+        │   ├── css
+        │   │   ├── accounts.css
+        │   │   ├── app.css
+        │   │   ├── bootstrap.min.css
+        │   │   └── simplemde.min.css
+        │   ├── img
+        │   │   ├── DO_Powered_by_Badge_black.png
+        │   │   ├── avatar.svg
+        │   │   └── shattered.png
+        │   └── js
+        │       ├── bootstrap.min.js
+        │       ├── jquery-3.2.1.min.js
+        │       ├── popper.min.js
+        │       └── simplemde.min.js
+        ├── templates
+        │   └── base.html
+        └── venv3932
 
 
 
