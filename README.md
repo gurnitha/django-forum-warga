@@ -330,7 +330,10 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         modified:   apps/boards/templates/boards/new_topic.html  
 
+#### 3.23.44 DJANGO FORM MODULE - Part 4, Adding help text to form
 
+        modified:   README.md
+        modified:   apps/boards/forms.py 
 
 
 
