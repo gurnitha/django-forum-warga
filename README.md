@@ -504,7 +504,10 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         modified:   templates/base.html
 
+#### 4.15.72 Displaying Menu For Authenticated Users - Part 2, Adding conditional to navbar menu to show menu to authenticated and not-authenticated user
 
+        modified:   README.md
+        modified:   templates/base.html
 
 
 
