@@ -308,7 +308,12 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
 
         modified:   README.md             
         modified:   apps/boards/models.py 
-                                        
+
+#### 3.19.40 Adding a button to link the topic and new_topic pages
+
+        modified:   README.md
+        modified:   apps/boards/templates/boards/topics.html
+
 
 
 
