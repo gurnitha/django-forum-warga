@@ -12,14 +12,17 @@
 {% block content %}
   <form method="post">
     {% csrf_token %}
-    <div class="form-group">
-      <label for="id_subject">Subject</label>
-      <input type="text" class="form-control" id="id_subject" name="subject">
-    </div>
-    <div class="form-group">
-      <label for="id_message">Message</label>
-      <textarea class="form-control" id="id_message" name="message" rows="5"></textarea>
-    </div>
+    {{ form.as_p }} 
+    <!-- Note: 
+      form is the variable from the new_topic view -->
     <button type="submit" class="btn btn-success">Post</button>
   </form>
 {% endblock %}
+
+{#  
+
+The Django Forms API does much more than processing and validating the data. It also generates the HTML for us.
+
+The form have three rendering options: form.as_table, form.as_ul, and form.as_p. It’s a quick way to render all the fields of a form. As the name suggests, the as_table uses table tags to format the inputs, the as_ul creates an HTML list of inputs, etc.
+
+#}
