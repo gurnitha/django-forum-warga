@@ -269,6 +269,10 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         modified:   templates/base.html
 
+#### 3.11.32 Adding google fonts
+
+        modified:   README.md
+        modified:   templates/base.html
 
 
 
