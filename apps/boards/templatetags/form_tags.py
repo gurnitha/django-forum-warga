@@ -1,6 +1,3 @@
-# accounts/templatetags/form_tags.py
-
-# Django modules
 from django import template
 
 register = template.Library()

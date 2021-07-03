@@ -542,7 +542,12 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         new file:   apps/boards/templatetags/__init__.py
         new file:   apps/boards/templatetags/form_tags.py
 
+#### 4.21.79 Template Tags - Part 2, Using the templatetags
 
+        modified:   README.md
+        modified:   apps/accounts/templates/accounts/includes/form.html
+        modified:   apps/boards/templates/boards/includes/form.html
+        modified:   apps/boards/templatetags/form_tags.py
 
 
 
