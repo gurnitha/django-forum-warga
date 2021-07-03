@@ -528,7 +528,11 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/accounts/templates/accounts/login.html
         modified:   apps/accounts/templates/accounts/signup.html 
 
+#### 4.19.76 Adding security message on form
 
+        modified:   README.md
+        modified:   apps/accounts/templates/accounts/includes/form.html
+        modified:   apps/boards/templates/boards/includes/form.html
 
 
 
