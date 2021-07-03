@@ -475,7 +475,11 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         modified:   templates/base.html
 
+#### 4.10.67 Adding the Email Field to the Form - Part 1, Create SignUpForm class
 
+        modified:   README.md
+        new file:   apps/accounts/forms.py
+ 
 
 
 
