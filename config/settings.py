@@ -149,8 +149,9 @@ STATICFILES_DIRS = [
 ]
 
 # Root URLconf
-ROOT_URLCONF = 'config.urls'
+# ROOT_URLCONF = 'config.urls' <-- double, by default it has the same
 
+LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 

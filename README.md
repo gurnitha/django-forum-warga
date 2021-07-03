@@ -561,9 +561,41 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         modified:   config/urls.py
 
+#### 4.24.82 Password Reset - Part 3, Create templates
 
+        modified:   README.md
+        new file:   apps/accounts/templates/accounts/registration/password_reset.html
+        new file:   apps/accounts/templates/accounts/registration/password_reset_confirm.html
+        new file:   apps/accounts/templates/accounts/registration/password_reset_done.html
+        new file:   apps/accounts/templates/accounts/registration/password_reset_email.html
+        new file:   apps/accounts/templates/accounts/registration/password_reset_subject.txt
+        new file:   apps/accounts/templates/accounts/registration/password_reset_template.html
 
+#### 4.25.84 Password Reset - Part 4, Adding templates and test
 
+        modified:   .gitignore
+        modified:   README.md
+        new file:   apps/accounts/templates/accounts/registration/password_change.html
+        new file:   apps/accounts/templates/accounts/registration/password_change_done.html
+        new file:   apps/accounts/templates/accounts/registration/password_reset.html
+        new file:   apps/accounts/templates/accounts/registration/password_reset_complate.html
+        new file:   apps/accounts/templates/accounts/registration/password_reset_confirm.html
+        new file:   apps/accounts/templates/accounts/registration/password_reset_done.html
+        new file:   apps/accounts/templates/accounts/registration/password_reset_email.html
+        new file:   apps/accounts/templates/accounts/registration/password_reset_subject.txt
+        new file:   apps/accounts/tests/test_view_password_reset.py
+        modified:   config/settings.py
+        modified:   config/urls.py
+        new file:   templates/registration/login.html
+        new file:   templates/registration/loginORI.html
+        new file:   templates/registration/password_change_done.html
+        new file:   templates/registration/password_change_form.html
+        new file:   templates/registration/password_reset.html
+        new file:   templates/registration/password_reset_complete.html
+        new file:   templates/registration/password_reset_confirm.html
+        new file:   templates/registration/password_reset_done.html
+        new file:   templates/registration/password_reset_email.html
+        new file:   templates/registration/password_reset_subject.txt
 
 
 
