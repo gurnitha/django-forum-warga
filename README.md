@@ -470,6 +470,10 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         modified:   apps/accounts/views.py
 
+#### 4.9.66 Referencing (showing) the Authenticated User in the Template 
+
+        modified:   README.md
+        modified:   templates/base.html
 
 
 
