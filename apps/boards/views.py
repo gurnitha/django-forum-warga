@@ -216,3 +216,13 @@ After protecting view   ing         0           0       July 3, 2021, 9:33 a.m.
 Victor on Django        Victor      0           0       July 3, 2021, 9:36 a.m.   
 ================================================================================
 """
+
+
+# TopicPosts view
+def topic_posts(request, pk, topic_pk):
+    topic = get_object_or_404(Topic, board__pk=pk, pk=topic_pk)
+    return render(request, 'boards/topic_posts.html', {'topic': topic})
+
+# http://127.0.0.1:8000/boards/1/topics/1/
+
+# Boards /Django / Hallo every one

@@ -666,10 +666,16 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/views.py
 
 
+#### 5.4.76 Topic Posts View - rendering:http://127.0.0.1:8000/boards/1/topics/1/
 
+        # http://127.0.0.1:8000/boards/1/topics/1/
 
+        # Boards /Django / Hallo every one
 
-
+        modified:   README.md
+        new file:   apps/boards/templates/boards/topic_posts.html
+        modified:   apps/boards/views.py
+        modified:   config/urls.py
 
 
 
