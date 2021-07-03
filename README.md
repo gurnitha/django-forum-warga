@@ -499,6 +499,12 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   config/settings.py
         modified:   config/urls.py
 
+#### 4.14.71 Displaying Menu For Authenticated Users - Part 1, Adding dropdown menu
+
+        modified:   README.md
+        modified:   templates/base.html
+
+
 
 
 
