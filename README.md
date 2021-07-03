@@ -550,7 +550,10 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/templatetags/form_tags.py
 
 
+#### 4.22.80 Password Reset - Part 1, Console Email Backend
 
+        modified:   README.md
+        modified:   config/settings.py
 
 
 
