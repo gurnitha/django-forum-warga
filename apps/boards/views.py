@@ -43,7 +43,11 @@ def board_topics(request, pk):
     return render(request, 'boards/topics.html', context)
 
 
-
+# NewTopic view
+def new_topic(request, pk):
+    board = get_object_or_404(Board, pk=pk)
+    context = {'board':board}
+    return render(request, 'boards/new_topic.html', context)
 
 
 
