@@ -517,7 +517,10 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   config/urls.py
         modified:   templates/base.html
 
+#### 4.17.74 Creating base_accounts template
 
+        modified:   README.md
+        new file:   apps/accounts/templates/base_accounts.html
 
 
 
