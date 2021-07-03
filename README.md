@@ -465,7 +465,10 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         renamed:    apps/boards/templates/includes/form.html -> apps/boards/templates/boards/includes/form.html
         modified:   apps/boards/templates/boards/new_topic.html
 
+#### 4.8.65 Bussines loci signup view and the validation
 
+        modified:   README.md
+        modified:   apps/accounts/views.py
 
 
 
