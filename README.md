@@ -264,7 +264,10 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         deleted:    apps/boards/templates/home.html
         modified:   apps/boards/views.py 
 
+#### 3.10.31 Adding top bar with a menu
 
+        modified:   README.md
+        modified:   templates/base.html
 
 
 
