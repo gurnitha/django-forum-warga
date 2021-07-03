@@ -251,7 +251,10 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         modified:   config/settings.py
 
+#### 3.8.29 Django Template Engine Setup: Creating base template to use template inheritance
 
+        modified:   README.md
+        new file:   templates/base.html
 
 
 
