@@ -609,14 +609,16 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/views.py
 
 
+#### 5.2.74 Configuring Login Next Redirect
 
+        http://127.0.0.1:8000/login/?next=/boards/1/new/
 
+        Notice the query string ?next=/boards/1/new/. We can improve the log in template to make use of the next variable and improve the user experience.
 
+        Then if we try to log in now, the application will direct us back to where we were.
 
-
-
-
-
+        modified:   README.md
+        modified:   apps/accounts/templates/accounts/login.html
 
 
 
