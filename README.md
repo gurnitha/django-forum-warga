@@ -319,6 +319,12 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         new file:   apps/boards/forms.py
 
+#### 3.21.42 DJANGO FORM MODULE - Part 2, Refactoring new_topic view
+
+        modified:   README.md
+        modified:   apps/boards/forms.py
+        modified:   apps/boards/views.py
+
 
 
 
