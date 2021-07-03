@@ -40,7 +40,7 @@ def home(request):
 def board_topics(request, pk):
     board = get_object_or_404(Board, pk=pk) # <--- same result
     context = {'board': board}
-    return render(request, 'boards/topics.html')
+    return render(request, 'boards/topics.html', context)
 
 
 

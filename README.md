@@ -240,6 +240,11 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         modified:   apps/boards/templates/home.htm
 
+#### 3.6.27 Adding dynamic breadcrumb to topics page
+
+        modified:   README.md
+        modified:   apps/boards/templates/boards/topics.html
+        modified:   apps/boards/views.py
 
 
 
