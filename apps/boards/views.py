@@ -84,33 +84,33 @@ def board_topics(request, pk):
 # -- replace by the codes bellow
 
 
-# NewTopic view
-@login_required
-def new_topic(request, pk):
-    board = get_object_or_404(Board, pk=pk)
-    user = User.objects.first()  # TODO: get the currently logged in user
+# # NewTopic view
+# @login_required
+# def new_topic(request, pk):
+#     board = get_object_or_404(Board, pk=pk)
+#     user = User.objects.first()  # TODO: get the currently logged in user
     
-    if request.method == 'POST':
-        form = NewTopicForm(request.POST)
+#     if request.method == 'POST':
+#         form = NewTopicForm(request.POST)
         
-        if form.is_valid():
-            topic = form.save(commit=False)
-            topic.board = board
-            topic.starter = user
-            topic.save()
-            post = Post.objects.create(
-                message=form.cleaned_data.get('message'),
-                topic=topic,
-                created_by=user
-            )
+#         if form.is_valid():
+#             topic = form.save(commit=False)
+#             topic.board = board
+#             topic.starter = user
+#             topic.save()
+#             post = Post.objects.create(
+#                 message=form.cleaned_data.get('message'),
+#                 topic=topic,
+#                 created_by=user
+#             )
 
-            return redirect('board_topics', pk=board.pk)  # TODO: redirect to the created topic page
+#             return redirect('board_topics', pk=board.pk)  # TODO: redirect to the created topic page
     
-    else:
-        form = NewTopicForm()
+#     else:
+#         form = NewTopicForm()
 
-    context = {'board':board, 'form':form}
-    return render(request, 'boards/new_topic.html', context)  
+#     context = {'board':board, 'form':form}
+#     return render(request, 'boards/new_topic.html', context)  
 
 """
 First we check if the request is a POST or a GET. If the request came 
@@ -150,4 +150,69 @@ That means we have to update the new_topic.html to display errors properly.
 If the request was a GET, we just initialize a new and 
 empty form using form = NewTopicForm().
 
+"""
+
+# -- replace by the codes bellow
+
+# NewTopic view
+@login_required
+def new_topic(request, pk):
+    board = get_object_or_404(Board, pk=pk)
+
+    if request.method == 'POST':
+        form = NewTopicForm(request.POST)
+
+        if form.is_valid():
+            topic = form.save(commit=False)
+            topic.board = board
+            topic.starter = request.user
+            topic.save()
+            Post.objects.create(
+                message=form.cleaned_data.get('message'),
+                topic=topic,
+                created_by=request.user
+            )
+            return redirect('board_topics', pk=board.pk)  # TODO: redirect to the created topic page
+    else:
+        form = NewTopicForm()
+
+    return render(request, 'boards/new_topic.html', {'board': board, 'form': form})
+
+
+"""
+Note with this codes:
+1. New user: Victor
+2. Victor logged in
+3. He made a topic on Python
+4. His topic and his name (as starter) appear on Python topic
+5. Similarly if he made something on Django topic,
+   the same thing happen
+6. See bellow
+================================================================================
+
+Boards / Python
+
+-----------
+|New topic|
+-----------
+
+Topic                   Starter     Replies     Views   Last Update
+--------------------------------------------------------------------------------
+Victor proposal         Victor      0           0       July 3, 2021, 9:35 a.m.
+Python is great         ing         0           0       July 3, 2021, 9:42 a.m.
+
+================================================================================
+
+Boards / Django
+
+-----------
+|New topic|
+-----------
+
+Topic                   Starter     Replies     Views   Last Update
+--------------------------------------------------------------------------------
+Hallo every one         ing         0           0       July 3, 2021, 1:07 a.m.
+After protecting view   ing         0           0       July 3, 2021, 9:33 a.m.
+Victor on Django        Victor      0           0       July 3, 2021, 9:36 a.m.   
+================================================================================
 """

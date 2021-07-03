@@ -621,9 +621,49 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/accounts/templates/accounts/login.html
 
 
+#### 5.3.75 Accessing the Authenticated User
 
 
+        """
+        Note with this codes:
+        1. New user: Victor
+        2. Victor logged in
+        3. He made a topic on Python
+        4. His topic and his name (as starter) appear on Python topic
+        5. Similarly if he made something on Django topic,
+        the same thing happen
+        6. See bellow
+        ================================================================================
 
+        Boards / Python
+
+        -----------
+        |New topic|
+        -----------
+
+        Topic                   Starter     Replies     Views   Last Update
+        --------------------------------------------------------------------------------
+        Victor proposal         Victor      0           0       July 3, 2021, 9:35 a.m.
+        Python is great         ing         0           0       July 3, 2021, 9:42 a.m.
+
+        ================================================================================
+
+        Boards / Django
+
+        -----------
+        |New topic|
+        -----------
+
+        Topic                   Starter     Replies     Views   Last Update
+        --------------------------------------------------------------------------------
+        Hallo every one         ing         0           0       July 3, 2021, 1:07 a.m.
+        After protecting view   ing         0           0       July 3, 2021, 9:33 a.m.
+        Victor on Django        Victor      0           0       July 3, 2021, 9:36 a.m.   
+        ================================================================================
+        """
+
+        modified:   README.md
+        modified:   apps/boards/views.py
 
 
 
