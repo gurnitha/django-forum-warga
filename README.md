@@ -361,6 +361,20 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         new file:   apps/boards/templates/includes/form.html 
 
 
+### -------------------------------
+### 4. DJANGO AUTHENTICATION SYSTEM
+### -------------------------------
+
+
+#### 4.1.49 Creating a new app 'apps/accounts' and register it to settigns.py
+
+        E:\workspace\django\ForumWarga\django-forum-warga (main)
+        (venv3932) λ mkdir apps\accounts
+
+        (venv3932) λ python manage.py startapp accounts apps/accounts
+
+        (venv3932) λ python manage.py check
+        System check identified no issues (0 silenced).
 
 
 
