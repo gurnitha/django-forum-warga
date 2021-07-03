@@ -556,7 +556,10 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   config/settings.py
 
 
+#### 4.23.81 Password Reset - Part 2, Configuring the Routes
 
+        modified:   README.md
+        modified:   config/urls.py
 
 
 
