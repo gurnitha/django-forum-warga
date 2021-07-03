@@ -433,7 +433,12 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         │   └── base.html
         └── venv3932
 
+#### 4.3.60 Creating signup page
 
+        modified:   README.md
+        new file:   apps/accounts/templates/accounts/signup.html
+        modified:   apps/accounts/views.py
+        modified:   config/urls.py 
 
 
 
