@@ -335,6 +335,13 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         modified:   apps/boards/forms.py 
 
+#### 3.24.45 Rendering Bootstrap Forms - Part 1, Install django-widget-tweaks
+
+        E:\workspace\django\ForumWarga\django-forum-warga (main)
+        (venv3932) λ pip install django-widget-tweaks
+
+        modified:   README.md
+        modified:   config/settings.py
 
 
 
