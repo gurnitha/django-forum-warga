@@ -348,7 +348,10 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         modified:   apps/boards/templates/boards/new_topic.html
 
+#### 3.26.47 Rendering Bootstrap Forms - Part 3,  Implement the Bootstrap 4 validation tags
 
+        modified:   README.md
+        modified:   apps/boards/templates/boards/new_topic.html
 
 
 

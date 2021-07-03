@@ -19,7 +19,22 @@
       <div class="form-group">
         {{ field.label_tag }}
 
-        {% render_field field class="form-control" %}
+        {% if form.is_bound %}
+          {% if field.errors %}
+
+            {% render_field field class="form-control is-invalid" %}
+            {% for error in field.errors %}
+              <div class="invalid-feedback">
+                {{ error }}
+              </div>
+            {% endfor %}
+
+          {% else %}
+            {% render_field field class="form-control is-valid" %}
+          {% endif %}
+        {% else %}
+          {% render_field field class="form-control" %}
+        {% endif %}
 
         {% if field.help_text %}
           <small class="form-text text-muted">
@@ -34,30 +49,28 @@
 {% endblock %}
 
 {#  
- <form method="post" novalidate>
-    <input type="hidden" name="csrfmiddlewaretoken" value="8YY7p1PNbej8dtIRqBDQ9uVMyFaKj1ZAGtSYDwrqzESkKjODDHpeQ9zWuRVVR4Gf">
-
-    
-      <div class="form-group">
-        <label for="id_subject">Subject:</label>
-
-        <input type="text" name="subject" maxlength="255" class="form-control" required id="id_subject">
+<form method="post" novalidate>
+   <input type="hidden" name="csrfmiddlewaretoken" value="VTm0XwVwvc6wG8735slKeiccnArr99hHtogRb1x9TCFIdYdPiy78VXQmjMcCHcYm">
+   <div class="form-group">
+      <label for="id_subject">Subject:</label>
+      <input type="text" name="subject" maxlength="255" class="form-control is-invalid" required id="id_subject">
+      <div class="invalid-feedback">
+         This field is required.
       </div>
-    
-      <div class="form-group">
-        <label for="id_message">Message:</label>
-
-        <textarea name="message" cols="40" rows="5" placeholder="What is on your mind?" maxlength="4000" class="form-control" required id="id_message">
-        </textarea>
-        
-          <small class="form-text text-muted">
-            The max length of the text is 4000.
-          </small>
-        
+   </div>
+   <div class="form-group">
+      <label for="id_message">Message:</label>
+      <textarea name="message" cols="40" rows="5" placeholder="What is on your mind?" maxlength="4000" class="form-control is-invalid" required id="id_message">
+</textarea>
+      <div class="invalid-feedback">
+         This field is required.
       </div>
-
-    <button type="submit" class="btn btn-success">Post</button>
-  </form>
+      <small class="form-text text-muted">
+      The max length of the text is 4000.
+      </small>
+   </div>
+   <button type="submit" class="btn btn-success">Post</button>
+</form>
 #}
 
 {#  
