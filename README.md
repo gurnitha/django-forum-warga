@@ -725,10 +725,11 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/templates/boards/topics.html
         modified:   apps/boards/views.py
 
+#### 5.12.83 Adding more field to Topic model and run migration
 
-
-
-
+        modified:   README.md
+        new file:   apps/boards/migrations/0002_topic_views.py
+        modified:   apps/boards/models.py
 
 
 
