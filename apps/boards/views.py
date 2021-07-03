@@ -1,7 +1,7 @@
 # apps/boards/views.py
 
 # Django modules
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.http import Http404
 
@@ -25,16 +25,22 @@ def home(request):
 
 # -- replace by the codes bellow
 
+# # BoardTopic view
+# def board_topics(request, pk):
+#     try:
+#         board = Board.objects.get(pk=pk)
+#     except Board.DoesNotExist:
+#         raise Http404    
+#     context = {'board': board}
+#     return render(request, 'boards/topics.html', context)
+
+# -- replace by the codes bellow
+
 # BoardTopic view
 def board_topics(request, pk):
-    try:
-        board = Board.objects.get(pk=pk)
-    except Board.DoesNotExist:
-        raise Http404    
+    board = get_object_or_404(Board, pk=pk) # <--- same result
     context = {'board': board}
-    return render(request, 'boards/topics.html', context)
-
-
+    return render(request, 'boards/topics.html')
 
 
 
