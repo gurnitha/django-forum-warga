@@ -457,6 +457,14 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         modified:   apps/accounts/templates/accounts/signup.html
 
+#### 4.7.64 Creating form template for accounts and modified includes in boards app, and adding security to form.html template
+
+        modified:   README.md
+        new file:   apps/accounts/templates/accounts/includes/form.html
+        modified:   apps/accounts/templates/accounts/signup.html
+        renamed:    apps/boards/templates/includes/form.html -> apps/boards/templates/boards/includes/form.html
+        modified:   apps/boards/templates/boards/new_topic.html
+
 
 
 
