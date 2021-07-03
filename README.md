@@ -719,9 +719,11 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/models.py
         modified:   apps/boards/templates/boards/home.html
 
+#### 5.11.82 Improve the topics listing view.
 
-
-
+        modified:   README.md
+        modified:   apps/boards/templates/boards/topics.html
+        modified:   apps/boards/views.py
 
 
 
