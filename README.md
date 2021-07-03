@@ -235,8 +235,10 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
 
         NOTE: same result as above
 
+#### 3.5.26 Dynamically showing single board by adding link
 
-
+        modified:   README.md
+        modified:   apps/boards/templates/home.htm
 
 
 
