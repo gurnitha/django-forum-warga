@@ -690,10 +690,22 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/templates/boards/topics.html
 
 
+#### 5.7.79 Reply Post View
 
+        modified:   README.md
+        modified:   apps/boards/forms.py
+        new file:   apps/boards/templates/boards/reply_topic.html
+        modified:   apps/boards/views.py
+        modified:   config/urls.py
 
+#### 5.8.80 Changing the starter post, so to give it more emphasis in the page
 
-
+        modified:   README.md
+        modified:   apps/boards/forms.py
+        new file:   apps/boards/templates/boards/reply_topic.html
+        modified:   apps/boards/templates/boards/topic_posts.html
+        modified:   apps/boards/views.py
+        modified:   config/urls.py
 
 
 

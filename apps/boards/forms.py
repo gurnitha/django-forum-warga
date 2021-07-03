@@ -4,7 +4,7 @@
 from django import forms
 
 # Django locals
-from apps.boards.models import Topic
+from apps.boards.models import Topic, Post
 
 class NewTopicForm(forms.ModelForm):
     message = forms.CharField(
@@ -28,3 +28,9 @@ field in the Topic class.
 Now observe that we are defining an extra field named message. 
 This refers to the message in the Post we want to save.
 """        
+
+class PostForm(forms.ModelForm):
+    
+    class Meta:
+        model = Post
+        fields = ['message', ]
