@@ -354,7 +354,11 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/templates/boards/new_topic.html
 
 
+#### 3.27.48 Reusable Forms Templates - Includes
 
+        modified:   README.md
+        modified:   apps/boards/templates/boards/new_topic.html
+        new file:   apps/boards/templates/includes/form.html 
 
 
 

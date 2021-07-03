@@ -1,8 +1,6 @@
 <!-- apps/boards/templates/boards/new_topic.html -->
 {% extends 'base.html' %}
 
-{% load widget_tweaks %}
-
 {% block title %}Start a New Topic{% endblock %}
 
 {% block breadcrumb %}
@@ -14,69 +12,7 @@
 {% block content %}
   <form method="post" novalidate>
     {% csrf_token %}
-
-    {% for field in form %}
-      <div class="form-group">
-        {{ field.label_tag }}
-
-        {% if form.is_bound %}
-          {% if field.errors %}
-
-            {% render_field field class="form-control is-invalid" %}
-            {% for error in field.errors %}
-              <div class="invalid-feedback">
-                {{ error }}
-              </div>
-            {% endfor %}
-
-          {% else %}
-            {% render_field field class="form-control is-valid" %}
-          {% endif %}
-        {% else %}
-          {% render_field field class="form-control" %}
-        {% endif %}
-
-        {% if field.help_text %}
-          <small class="form-text text-muted">
-            {{ field.help_text }}
-          </small>
-        {% endif %}
-      </div>
-    {% endfor %}
-
+    {% include 'includes/form.html' %}
     <button type="submit" class="btn btn-success">Post</button>
   </form>
 {% endblock %}
-
-{#  
-<form method="post" novalidate>
-   <input type="hidden" name="csrfmiddlewaretoken" value="VTm0XwVwvc6wG8735slKeiccnArr99hHtogRb1x9TCFIdYdPiy78VXQmjMcCHcYm">
-   <div class="form-group">
-      <label for="id_subject">Subject:</label>
-      <input type="text" name="subject" maxlength="255" class="form-control is-invalid" required id="id_subject">
-      <div class="invalid-feedback">
-         This field is required.
-      </div>
-   </div>
-   <div class="form-group">
-      <label for="id_message">Message:</label>
-      <textarea name="message" cols="40" rows="5" placeholder="What is on your mind?" maxlength="4000" class="form-control is-invalid" required id="id_message">
-</textarea>
-      <div class="invalid-feedback">
-         This field is required.
-      </div>
-      <small class="form-text text-muted">
-      The max length of the text is 4000.
-      </small>
-   </div>
-   <button type="submit" class="btn btn-success">Post</button>
-</form>
-#}
-
-{#  
-
-The Django Forms API does much more than processing and validating the data. It also generates the HTML for us.
-
-The form have three rendering options: form.as_table, form.as_ul, and form.as_p. It’s a quick way to render all the fields of a form. As the name suggests, the as_table uses table tags to format the inputs, the as_ul creates an HTML list of inputs, etc.
-
-#}
