@@ -256,7 +256,13 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         new file:   templates/base.html
 
+#### 3.9.30 Django Template Engine Setup: refactor home and topics pages
 
+        modified:   README.md
+        new file:   apps/boards/templates/boards/home.html
+        modified:   apps/boards/templates/boards/topics.html
+        deleted:    apps/boards/templates/home.html
+        modified:   apps/boards/views.py 
 
 
 

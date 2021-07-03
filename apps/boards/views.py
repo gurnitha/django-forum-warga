@@ -14,7 +14,7 @@ from apps.boards.models import Board
 def home(request):
     boards = Board.objects.all()
     context = {'boards': boards}
-    return render(request, 'home.html', context )
+    return render(request, 'boards/home.html', context )
 
 
 # # BoardTopic view
