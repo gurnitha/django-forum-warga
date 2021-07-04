@@ -923,3 +923,13 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/models.py
         modified:   apps/boards/templates/boards/topics.html
         modified:   apps/boards/views.py
+
+#### 6.5.105 Limitting replies showed in reply page
+
+        """
+        In the reply page, we are currently listing all topic replies. We could limit it to just the last ten posts.
+        """         
+
+        modified:   README.md
+        modified:   apps/boards/models.py
+        modified:   apps/boards/templates/boards/reply_topic.html
