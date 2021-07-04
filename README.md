@@ -868,10 +868,15 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   templates/base.html 
 
 
+#### ------------------
+#### PART 6: HUMANIZE 
+#### ------------------
 
-
-
-
+#### 6.1.96 Adding humanize to topic page
+ 
+        modified:   README.md
+        modified:   apps/boards/templates/boards/topics.html
+        modified:   config/settings.py
 
 
 
