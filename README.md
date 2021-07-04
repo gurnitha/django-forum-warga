@@ -739,10 +739,18 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/views.py
 
 
+#### -------------------------------------------------------
+#### PART 6: CLASS-BASED VIEWS AND GENERIC CLASS-BASED VIEWS
+#### -------------------------------------------------------
 
 
+#### 6.1.85 Using GCBV - Part 1, Create PostUpdateView
 
-
+        modified:   README.md
+        new file:   apps/boards/templates/boards/edit_post.html
+        modified:   apps/boards/templates/boards/topic_posts.html
+        modified:   apps/boards/views.py
+        modified:   config/urls.py
 
 
 
