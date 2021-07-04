@@ -759,7 +759,10 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/views.py
 
 
+#### 6.3.87 Using GCBV - Part 2, Dealing with the other users editing any posts 
 
+        modified:   README.md
+        modified:   apps/boards/views.py
 
 
 
