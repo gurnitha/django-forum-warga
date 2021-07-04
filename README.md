@@ -835,9 +835,18 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   config/urls.py
 
 
+#### -------------------------
+#### PART 6: MY ACCOUNT VIEW 
+#### -------------------------
 
 
+#### 6.1.93 Creating my_account page and UserUpdateView
 
+        modified:   README.md
+        new file:   apps/accounts/templates/accounts/my_account.html
+        modified:   apps/accounts/views.py
+        modified:   apps/boards/views.py
+        modified:   config/urls.py
 
 
 
