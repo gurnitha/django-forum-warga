@@ -753,6 +753,10 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   config/urls.py
 
 
+#### 6.2.86 Using GCBV - Part 2, Adding method_decorator to PostUpdateView
+
+        modified:   README.md
+        modified:   apps/boards/views.py
 
 
 
