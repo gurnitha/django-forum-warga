@@ -907,3 +907,11 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
 
         modified:   README.md
         modified:   apps/boards/views.py
+
+#### 6.3.101 provide a better navigation in the topics listing        
+        """
+        Currently the only option is for the user to click in the topic title and go to the first page. We could workout something like this:
+        """
+
+        modified:   README.md
+        modified:   apps/boards/models.py
