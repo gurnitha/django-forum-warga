@@ -955,6 +955,21 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         <First | Previous | 40, 50, 61 |Next | Last>
 
         """   
-            
+
         modified:   README.md
         modified:   apps/boards/templates/boards/includes/pagination.html
+
+
+#### Conclusion Part 6
+
+        """
+        Conclusions
+        With this tutorial, we finalized the implementation of our Django board application. I will probably release a follow-up implementation tutorial to improve the code. There are many things we can explore together. For example, database optimizations, improve the user interface, play with file uploads, create a moderation system, and so on.
+
+        The next tutorial will be focused on deployment. It’s going to be a complete guide on how to put your code in production taking care of all the important details.
+
+        Here is the link of Part 6
+        https://simpleisbetterthancomplex.com/series/2017/10/09/a-complete-beginners-guide-to-django-part-6.html
+        """
+
+        modified:   README.md
