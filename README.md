@@ -849,11 +849,15 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   config/urls.py
 
 
+#### 6.2.94 Markdown - Install markdown and use it Post model
 
+        E:\workspace\django\ForumWarga\django-forum-warga (main)
+        (venv3932) λ pip install markdown
 
-
-
-
+        modified:   README.md
+        modified:   apps/boards/models.py
+        modified:   apps/boards/templates/boards/reply_topic.html
+        modified:   apps/boards/templates/boards/topic_posts.html
 
 
 
