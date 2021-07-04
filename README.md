@@ -860,7 +860,12 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/templates/boards/topic_posts.html
 
 
+#### 6.3.95 Markdown Editor - Adding Markdown Editor to topic_posts and reply_topic pages
 
+        modified:   README.md
+        modified:   apps/boards/templates/boards/edit_post.html
+        modified:   apps/boards/templates/boards/reply_topic.html
+        modified:   templates/base.html 
 
 
 
