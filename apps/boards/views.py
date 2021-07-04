@@ -3,7 +3,7 @@
 # Django modules
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.http import Http404
 from django.db.models import Count
@@ -317,7 +317,29 @@ def topic_posts(request, pk, topic_pk):
 #     return render(request, 'boards/reply_topic.html', {'topic': topic, 'form': form})
 
 
-# reply_topic 2
+# # reply_topic 2
+# @login_required
+# def reply_topic(request, pk, topic_pk):
+#     topic = get_object_or_404(Topic, board__pk=pk, pk=topic_pk)
+#     if request.method == 'POST':
+#         form = PostForm(request.POST)
+#         if form.is_valid():
+#             post = form.save(commit=False)
+#             post.topic = topic
+#             post.created_by = request.user
+#             post.save()
+
+#             topic.last_updated = timezone.now()  # <- here
+#             topic.save()                         # <- and here
+
+#             return redirect('topic_posts', pk=pk, topic_pk=topic_pk)
+#     else:
+#         form = PostForm()
+#     return render(request, 'boards/reply_topic.html', {'topic': topic, 'form': form})
+
+
+# reply_topic 3 
+#(to redict to last page after posing a reply)
 @login_required
 def reply_topic(request, pk, topic_pk):
     topic = get_object_or_404(Topic, board__pk=pk, pk=topic_pk)
@@ -329,10 +351,23 @@ def reply_topic(request, pk, topic_pk):
             post.created_by = request.user
             post.save()
 
-            topic.last_updated = timezone.now()  # <- here
-            topic.save()                         # <- and here
+            topic.last_updated = timezone.now()
+            topic.save()
 
-            return redirect('topic_posts', pk=pk, topic_pk=topic_pk)
+            topic_url = reverse('topic_posts', kwargs={'pk': pk, 'topic_pk': topic_pk})
+            topic_post_url = '{url}?page={page}#{id}'.format(
+                url=topic_url,
+                id=post.pk,
+                page=topic.get_page_count()
+            )
+
+            """
+            In the topic_post_url we are building a URL with 
+            the last page and adding an anchor to the element 
+            with id equals to the post ID.
+            """
+
+            return redirect(topic_post_url)
     else:
         form = PostForm()
     return render(request, 'boards/reply_topic.html', {'topic': topic, 'form': form})

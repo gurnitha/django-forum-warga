@@ -933,3 +933,14 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         modified:   apps/boards/models.py
         modified:   apps/boards/templates/boards/reply_topic.html
+
+
+#### 6.6.106 Redirecting user to last page after posting a reply
+
+        """
+        Another thing is that when the user replies to a post, we are redirecting the user to the first page again. We could improve it by sending the user to the last page.
+        """
+
+        modified:   README.md
+        modified:   apps/boards/templates/boards/topic_posts.html
+        modified:   apps/boards/views.py
