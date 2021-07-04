@@ -825,6 +825,19 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   config/urls.py
 
 
+#### 6.4.92 Making pagination using GCBV (with magic) - Paginate the topic posts page (Reusable Pagination Template)
+
+        modified:   README.md
+        new file:   apps/boards/templates/boards/includes/pagination.html
+        modified:   apps/boards/templates/boards/topic_posts.html
+        modified:   apps/boards/templates/boards/topics.html
+        modified:   apps/boards/views.py
+        modified:   config/urls.py
+
+
+
+
+
 
 
 

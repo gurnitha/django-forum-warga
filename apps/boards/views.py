@@ -65,25 +65,43 @@ class BoardListView(ListView):
 #     return render(request, 'boards/topics.html', {'board': board, 'topics': topics})
 
 
-# BoardTopic view 3 add Pagination
-def board_topics(request, pk):
-    board = get_object_or_404(Board, pk=pk)
-    queryset = board.topics.order_by('-last_updated').annotate(replies=Count('posts') - 1)
-    page = request.GET.get('page', 1)
+# # BoardTopic view 3 add Pagination
+# def board_topics(request, pk):
+#     board = get_object_or_404(Board, pk=pk)
+#     queryset = board.topics.order_by('-last_updated').annotate(replies=Count('posts') - 1)
+#     page = request.GET.get('page', 1)
 
-    paginator = Paginator(queryset, 10)
+#     paginator = Paginator(queryset, 10)
 
-    try:
-        topics = paginator.page(page)
-    except PageNotAnInteger:
-        # fallback to the first page
-        topics = paginator.page(1)
-    except EmptyPage:
-        # probably the user tried to add a page number
-        # in the url, so we fallback to the last page
-        topics = paginator.page(paginator.num_pages)
+#     try:
+#         topics = paginator.page(page)
+#     except PageNotAnInteger:
+#         # fallback to the first page
+#         topics = paginator.page(1)
+#     except EmptyPage:
+#         # probably the user tried to add a page number
+#         # in the url, so we fallback to the last page
+#         topics = paginator.page(paginator.num_pages)
 
-    return render(request, 'boards/topics.html', {'board': board, 'topics': topics})
+#     return render(request, 'boards/topics.html', {'board': board, 'topics': topics})
+
+
+# BoardTopic view 4 add Pagination (GCBV: TopicListView)
+class TopicListView(ListView):
+    model = Topic
+    context_object_name = 'topics'
+    template_name = 'boards/topics.html'
+    paginate_by = 10
+
+    def get_context_data(self, **kwargs):
+        kwargs['board'] = self.board
+        return super().get_context_data(**kwargs)
+
+    def get_queryset(self):
+        self.board = get_object_or_404(Board, pk=self.kwargs.get('pk'))
+        queryset = self.board.topics.order_by('-last_updated').annotate(replies=Count('posts') - 1)
+        return queryset
+
 
 
 # # NewTopic view
@@ -352,18 +370,19 @@ class PostUpdateView(UpdateView):
         return redirect('topic_posts', pk=post.topic.board.pk, topic_pk=post.topic.pk)
 
 
-#GCBV: TopicListView
-class TopicListView(ListView):
-    model = Topic
-    context_object_name = 'topics'
-    template_name = 'boards/topics.html'
-    paginate_by = 20
+class PostListView(ListView):
+    model = Post
+    context_object_name = 'posts'
+    template_name = 'boards/topic_posts.html'
+    paginate_by = 2
 
     def get_context_data(self, **kwargs):
-        kwargs['board'] = self.board
+        self.topic.views += 1
+        self.topic.save()
+        kwargs['topic'] = self.topic
         return super().get_context_data(**kwargs)
 
     def get_queryset(self):
-        self.board = get_object_or_404(Board, pk=self.kwargs.get('pk'))
-        queryset = self.board.topics.order_by('-last_updated').annotate(replies=Count('posts') - 1)
+        self.topic = get_object_or_404(Topic, board__pk=self.kwargs.get('pk'), pk=self.kwargs.get('topic_pk'))
+        queryset = self.topic.posts.order_by('created_at')
         return queryset
