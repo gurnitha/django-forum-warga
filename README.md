@@ -813,7 +813,16 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/views.py
 
 
+#### -------------------------------------------
+#### PART 6: PAGINATION - Working on ListView
+#### -------------------------------------------
 
+#### 6.3.91 Making pagination using GCBV (with magic) - Changing board_topics view with TopicListView 
+
+        modified:   README.md
+        modified:   apps/boards/templates/boards/topics.html
+        modified:   apps/boards/views.py
+        modified:   config/urls.py
 
 
 
