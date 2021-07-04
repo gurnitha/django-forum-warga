@@ -903,3 +903,7 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/views.py
 
 
+#### 6.2.100 Controlling the view counting system
+
+        modified:   README.md
+        modified:   apps/boards/views.py
