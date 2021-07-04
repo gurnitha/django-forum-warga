@@ -335,7 +335,7 @@ def reply_topic(request, pk, topic_pk):
             return redirect('topic_posts', pk=pk, topic_pk=topic_pk)
     else:
         form = PostForm()
-    return render(request, 'reply_topic.html', {'topic': topic, 'form': form})
+    return render(request, 'boards/reply_topic.html', {'topic': topic, 'form': form})
 
 
 

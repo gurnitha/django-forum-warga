@@ -1,6 +1,7 @@
 # apps/boards/models.py
 
 # Django modules
+import math
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import Truncator
@@ -36,13 +37,13 @@ class Topic(models.Model):
 
     def get_page_count(self):
         count = self.posts.count()
-        pages = count / 20
+        pages = count / 2
         return math.ceil(pages)
 
     def has_many_pages(self, count=None):
         if count is None:
             count = self.get_page_count()
-        return count > 6
+        return count > 2
 
     def get_page_range(self):
         count = self.get_page_count()
@@ -50,7 +51,7 @@ class Topic(models.Model):
             return range(1, 5)
         return range(1, count + 1)
 
-        
+
 # Post model
 class Post(models.Model):
     message = models.TextField(max_length=4000)

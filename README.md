@@ -915,3 +915,11 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
 
         modified:   README.md
         modified:   apps/boards/models.py
+
+
+#### 6.4.102 Adjusting the number of pages to show the pagination in  topi list
+
+
+        modified:   apps/boards/models.py
+        modified:   apps/boards/templates/boards/topics.html
+        modified:   apps/boards/views.py
