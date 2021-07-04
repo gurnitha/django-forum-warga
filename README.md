@@ -800,6 +800,10 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
 
 
+#### 6.2.90 Making pagination with FBV Pagination (no magic) - Modified board_topics view
+
+        modified:   README.md
+        modified:   apps/boards/views.py
 
 
 
