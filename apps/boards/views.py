@@ -58,11 +58,11 @@ class BoardListView(ListView):
 #     return render(request, 'boards/topics.html', context)
 
 
-# BoardTopic view 2
-def board_topics(request, pk):
-    board = get_object_or_404(Board, pk=pk)
-    topics = board.topics.order_by('-last_updated').annotate(replies=Count('posts') - 1)
-    return render(request, 'boards/topics.html', {'board': board, 'topics': topics})
+# # BoardTopic view 2
+# def board_topics(request, pk):
+#     board = get_object_or_404(Board, pk=pk)
+#     topics = board.topics.order_by('-last_updated').annotate(replies=Count('posts') - 1)
+#     return render(request, 'boards/topics.html', {'board': board, 'topics': topics})
 
 
 # BoardTopic view 3 add Pagination
@@ -71,7 +71,7 @@ def board_topics(request, pk):
     queryset = board.topics.order_by('-last_updated').annotate(replies=Count('posts') - 1)
     page = request.GET.get('page', 1)
 
-    paginator = Paginator(queryset, 20)
+    paginator = Paginator(queryset, 10)
 
     try:
         topics = paginator.page(page)
@@ -83,7 +83,7 @@ def board_topics(request, pk):
         # in the url, so we fallback to the last page
         topics = paginator.page(paginator.num_pages)
 
-    return render(request, 'topics.html', {'board': board, 'topics': topics})
+    return render(request, 'boards/topics.html', {'board': board, 'topics': topics})
 
 
 # # NewTopic view

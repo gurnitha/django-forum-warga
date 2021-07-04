@@ -806,7 +806,11 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/views.py
 
 
+#### 6.2.90 Making pagination with FBV Pagination (no magic) - Adding pagination to boards/topic.html page
 
+        modified:   README.md
+        modified:   apps/boards/templates/boards/topics.html
+        modified:   apps/boards/views.py
 
 
 
