@@ -873,15 +873,22 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
 #### ------------------
 
 #### 6.1.96 Adding humanize to topic page
- 
+
         modified:   README.md
         modified:   apps/boards/templates/boards/topics.html
         modified:   config/settings.py
 
 
+#### ------------------
+#### PART 6: GRAVATAR 
+#### ------------------
 
 
+#### 6.1.98 Adding gravatar to topic_posts page
 
+        modified:   README.md
+        modified:   apps/boards/templates/boards/topic_posts.html
+        new file:   apps/boards/templatetags/gravatar.py
 
 
 
