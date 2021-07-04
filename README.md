@@ -944,3 +944,17 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   README.md
         modified:   apps/boards/templates/boards/topic_posts.html
         modified:   apps/boards/views.py
+
+
+#### 6.7.107 Solving the problem with the pagination when the number of pages is too high
+
+        """
+        <Previous 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,2n Next>
+        
+        to
+        <First | Previous | 40, 50, 61 |Next | Last>
+
+        """   
+            
+        modified:   README.md
+        modified:   apps/boards/templates/boards/includes/pagination.html

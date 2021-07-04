@@ -1,6 +1,6 @@
 <!-- apps/boards/templates/includes/pagination.html -->
 
-{% if is_paginated %}
+<!-- {% if is_paginated %}
   <nav aria-label="Topics pagination" class="mb-4">
     <ul class="pagination">
       {% if page_obj.has_previous %}
@@ -35,6 +35,79 @@
       {% else %}
         <li class="page-item disabled">
           <span class="page-link">Next</span>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}  -->
+
+        <!-- """
+        
+        ABOVE CODE GIVES PAGINATION BELLOW
+        
+        <Previous 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,2n Next>
+        
+        BELLOW CODE GIVES PAGINATION BELLOW
+        
+        <First | Previous | 40, 50, 61 |Next | Last>
+
+        """   -->   
+
+{% if is_paginated %}
+  <nav aria-label="Topics pagination" class="mb-4">
+    <ul class="pagination">
+      {% if page_obj.number > 1 %}
+        <li class="page-item">
+          <a class="page-link" href="?page=1">First</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">First</span>
+        </li>
+      {% endif %}
+
+      {% if page_obj.has_previous %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">Previous</span>
+        </li>
+      {% endif %}
+
+      {% for page_num in paginator.page_range %}
+        {% if page_obj.number == page_num %}
+          <li class="page-item active">
+            <span class="page-link">
+              {{ page_num }}
+              <span class="sr-only">(current)</span>
+            </span>
+          </li>
+        {% elif page_num > page_obj.number|add:'-3' and page_num < page_obj.number|add:'3' %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+
+      {% if page_obj.has_next %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">Next</span>
+        </li>
+      {% endif %}
+
+      {% if page_obj.number != paginator.num_pages %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ paginator.num_pages }}">Last</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">Last</span>
         </li>
       {% endif %}
     </ul>
