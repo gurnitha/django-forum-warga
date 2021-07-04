@@ -892,11 +892,14 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
 
 
 
+#### ---------------------------
+#### PART 6: FINAL ADJUSTMENT
+#### ---------------------------
 
 
+#### 6.1.99 Updating last_update post replies
 
-
-
-
+        modified:   README.md
+        modified:   apps/boards/views.py
 
 

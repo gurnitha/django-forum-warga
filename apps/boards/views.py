@@ -295,25 +295,48 @@ def topic_posts(request, pk, topic_pk):
     return render(request, 'boards/topic_posts.html', {'topic': topic})
 
 
+# # reply_topic 1
+# @login_required
+# def reply_topic(request, pk, topic_pk):
+
+#     topic = get_object_or_404(Topic, board__pk=pk, pk=topic_pk)
+    
+#     if request.method == 'POST':
+#         form = PostForm(request.POST)
+
+#         if form.is_valid():
+#             post = form.save(commit=False)
+#             post.topic = topic
+#             post.created_by = request.user
+#             post.save()
+#             return redirect('topic_posts', pk=pk, topic_pk=topic_pk)
+    
+#     else:
+#         form = PostForm()
+
+#     return render(request, 'boards/reply_topic.html', {'topic': topic, 'form': form})
+
+
+# reply_topic 2
 @login_required
 def reply_topic(request, pk, topic_pk):
-
     topic = get_object_or_404(Topic, board__pk=pk, pk=topic_pk)
-    
     if request.method == 'POST':
         form = PostForm(request.POST)
-
         if form.is_valid():
             post = form.save(commit=False)
             post.topic = topic
             post.created_by = request.user
             post.save()
+
+            topic.last_updated = timezone.now()  # <- here
+            topic.save()                         # <- and here
+
             return redirect('topic_posts', pk=pk, topic_pk=topic_pk)
-    
     else:
         form = PostForm()
+    return render(request, 'reply_topic.html', {'topic': topic, 'form': form})
 
-    return render(request, 'boards/reply_topic.html', {'topic': topic, 'form': form})
 
 
 # #GCBV: PostUpdateView 1
