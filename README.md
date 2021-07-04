@@ -772,9 +772,32 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   config/urls.py  
 
 
+#### ----------------------------------------------
+#### PART 6: PAGINATION - Working on board_topics
+#### ----------------------------------------------
 
 
+#### 6.1.89 Creating 100 Django posts from the python shell
 
+        E:\workspace\django\ForumWarga\django-forum-warga (main)
+        (venv3932) λ python manage.py shell
+        ...
+        >>> from django.contrib.auth.models import User
+        >>> from boards.models import Board, Topic, Post
+        >>> from apps.boards.models import Board, Topic, Post
+        >>> user = User.objects.first()
+        >>> board = Board.objects.get(name='Django')
+        >>> for i in range(100):
+        ...     subject = 'Topic test #{}'.format(i)
+        ...     topic = Topic.objects.create(subject=subject, board=board, starter=user)
+        ...     Post.objects.create(message='Lorem ipsum...', topic=topic, created_by=user)
+        ...
+        <Post: Lorem ipsum...>
+        <Post: Lorem ipsum...>
+        ...
+        <Post: Lorem ipsum...>        
+
+        modified:   README.md
 
 
 
