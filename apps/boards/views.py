@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.http import Http404
 from django.db.models import Count
-from django.views.generic import UpdateView
+from django.views.generic import UpdateView, ListView
 from django.utils import timezone
 from django.utils.decorators import method_decorator
 
@@ -17,11 +17,18 @@ from apps.boards.models import Board, Topic, Post
 
 # Create your views here.
 
-# Home view
-def home(request):
-    boards = Board.objects.all()
-    context = {'boards': boards}
-    return render(request, 'boards/home.html', context )
+# # Home view 1
+# def home(request):
+#     boards = Board.objects.all()
+#     context = {'boards': boards}
+#     return render(request, 'boards/home.html', context )
+
+
+# Home view 2 using GCBV
+class BoardListView(ListView):
+    model = Board
+    context_object_name = 'boards'
+    template_name = 'boards/home.html'
 
 
 # # BoardTopic view

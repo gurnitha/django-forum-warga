@@ -765,7 +765,11 @@ Membuat Aplikasi Forum Warga menggunakan Django v3.2
         modified:   apps/boards/views.py
 
 
+#### 6.4.88 Using GCBV - Using ListView to rendering list of posts in the home page by replecing home view by BoardListView
 
+        modified:   README.md
+        modified:   apps/boards/views.py
+        modified:   config/urls.py  
 
 
 
